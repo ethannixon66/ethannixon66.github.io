@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col v-for="set in sets" :key="set.set_num" :cols="cols" sm="12">
+    <v-col v-for="set in sets" :key="set.set_num" :cols="cols">
       <LegoSetCard :set="set" :inCollection="inCollection" />
     </v-col>
   </v-row>
@@ -22,8 +22,9 @@ export default {
     cols() {
       console.log(this.$vuetify.breakpoint.name)
       switch (this.$vuetify.breakpoint.name) {
+        case 'lg': case 'xl': return 4
         case 'sm': case 'xs': return 12
-        default: return 3
+        default: return 4
       }
     }
   }
