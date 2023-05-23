@@ -23,7 +23,7 @@ export default {
   },
   async fetch() {
     this.results = await fetch(
-      `http://147.182.138.48/search/${this.$route.query.q}`
+      `https://147.182.138.48/search/${this.$route.query.q}`
     ).then(res => res.json())
   },
   methods: {
