@@ -23,7 +23,7 @@ export default {
   },
   async fetch() {
     this.results = await fetch(
-      `https://rebrickable.com/api/v3/lego/sets/?key=cc0e4ad6118c3d9f2a6bcd1b0486ca06&search=${this.$route.query.q}`
+      `http://147.182.138.48/search/${this.$route.query.q}`
     ).then(res => res.json())
   },
   methods: {

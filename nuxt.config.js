@@ -75,6 +75,6 @@ export default {
   generate: {
     nojekyll: true // not working on this version
   },
-  ssr: true, // server side rendered enabled //When true
+  ssr: false, // server side rendered enabled //When true
   target: 'static'
 }
